@@ -1,0 +1,30 @@
+# See also feature.xml files for product and product-soa and ensure all URLs are consistent
+# To remove a site, use instructions.unconfigure
+instructions.configure=\
+org.eclipse.equinox.p2.touchpoint.eclipse.removeProgramArg(programArg:-showsplash);\
+org.eclipse.equinox.p2.touchpoint.eclipse.removeProgramArg(programArg:org.eclipse.platform);\
+org.eclipse.equinox.p2.touchpoint.eclipse.removeProgramArg(programArg:-product);\
+org.eclipse.equinox.p2.touchpoint.eclipse.removeProgramArg(programArg:org.eclipse.platform);\
+org.eclipse.equinox.p2.touchpoint.eclipse.removeProgramArg(programArg:org.eclipse.epp.package.jee.product);\
+org.eclipse.equinox.p2.touchpoint.eclipse.removeProgramArg(programArg:com.jboss.jbds.product.product);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addProgramArg(programArg:-product);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addProgramArg(programArg:com.jboss.jbds.product.product);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addJvmArg(jvmArg:-Dosgi.splashPath=platform${#58}/base/plugins/com.jboss.jbds.product);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addRepository(type:0,location:https${#58}//devstudio.jboss.com/updates/6.0/,name:JBoss Developer Studio 6.0 Updates);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addRepository(type:1,location:https${#58}//devstudio.jboss.com/updates/6.0/,name:JBoss Developer Studio 6.0 Updates);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addRepository(type:0,location:https${#58}//devstudio.jboss.com/updates/6.0/extras/,name:JBoss Developer Studio 6.0 Extras);\
+org.eclipse.equinox.p2.touchpoint.eclipse.addRepository(type:1,location:https${#58}//devstudio.jboss.com/updates/6.0/extras/,name:JBoss Developer Studio 6.0 Extras);
+# This part defines category that contains feature generated based on product file
+units.1.id=com.jboss.jbds.all.category
+units.1.version=$version$
+units.1.provides.1.namespace=org.eclipse.equinox.p2.iu
+units.1.provides.1.name=com.jboss.jbds.all.category
+units.1.provides.1.version=$version$
+units.1.properties.1.name=org.eclipse.equinox.p2.type.category
+units.1.properties.1.value=true
+units.1.properties.2.name=org.eclipse.equinox.p2.name
+units.1.properties.2.value=JBoss Developer Studio
+units.1.requires.1.namespace=org.eclipse.equinox.p2.iu
+units.1.requires.1.name=com.jboss.jbds.all
+units.1.requires.1.range=[$version$,$version$]
+units.1.requires.1.greedy=true

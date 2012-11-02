@@ -26,6 +26,13 @@
 				<module>../vpe</module>
 			</modules>
 		</profile>
-	</profiles>
+                <profile>
+                        <id>product</id>
+                        <modules>
+                                <module>tests/product</module>
+                        </modules>
+                </profile>
+        </profiles>
+
 </project>
 	

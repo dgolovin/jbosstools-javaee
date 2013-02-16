@@ -3,6 +3,7 @@
 
 <product name="JBoss Tools Development IDE" uid="org.jboss.tools.javaee.ide" id="org.eclipse.platform.ide" application="org.eclipse.ui.ide.workbench" version="1.0.1" useFeatures="true" includeLaunchers="true">
 
+
    <configIni use="default">
    </configIni>
 
@@ -20,6 +21,7 @@
          <bmp/>
       </win>
    </launcher>
+
 
    <vm>
    </vm>
@@ -45,6 +47,7 @@
       <feature id="org.eclipse.wst.jsdt.feature"/>
       <feature id="org.eclipse.wst.server_core.feature"/>
       <feature id="org.eclipse.wst.web_ui.feature"/>
+      <feature id="org.eclipse.platform"/>
    </features>
 
    <configurations>

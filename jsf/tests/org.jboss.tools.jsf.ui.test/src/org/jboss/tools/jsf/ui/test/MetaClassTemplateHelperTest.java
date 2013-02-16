@@ -42,6 +42,7 @@ public class MetaClassTemplateHelperTest extends TestCase {
 			String className = MetaClassTemplateHelper.instance.getSuperClassName(project, 
 					" http://java.sun.com/xml/ns/javaee  \n"
 					+ "  http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd", 
+					"http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd", 
 					"application-factory/text()[1]");
 			System.out.println(className);
 			assertNotNull(className);
